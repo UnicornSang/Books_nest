@@ -54,8 +54,8 @@
                       <td><?= $danhMuc['ten_danh_muc'] ?> </td>
                       <td><?= $danhMuc['mo_ta'] ?> </td>
                       <td>
-                        <button class="btn-btn-warning">Sửa</button>
-                        <button class="btn-btn-danggr">Xóa</button>
+                        <button class="btn btn-warning" >Sửa</button>
+                        <button class="btn btn-danger">Xóa</button>
                       </td>
                     </tr>
                   <?php endforeach ?>
