@@ -46,9 +46,20 @@
         </li>
          <li class="nav-item">
           <a href="<?= BASE_URL_ADMIN. '?act=san_pham'?>" class="nav-link">
-            <i class="nav-icon fas fa-cat"></i>
+            <i class="nav-icon fas fa-book"></i>
             <p>
               danh mục sản phẩm
+              
+            </p>
+          </a>
+        </li>
+
+        </li>
+         <li class="nav-item">
+          <a href="<?= BASE_URL_ADMIN. '?act=don-hang'?>" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+            <p>
+              Quản lý đơn hàng
               
             </p>
           </a>

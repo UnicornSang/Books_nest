@@ -21,3 +21,8 @@ function connectDB() {
         echo ("Connection failed: " . $e->getMessage());
     }
 }
+
+function formatDate($date) {
+    // Chuyển đổi định dạng ngày từ 'Y-m-d' sang 'd/m/Y'
+    return date("d/m/Y", strtotime($date));
+}
