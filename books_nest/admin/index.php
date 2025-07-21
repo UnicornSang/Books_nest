@@ -34,7 +34,13 @@ match ($act) {
     'form-sua-don-hang' =>(new AdminDonHangController())->formEditDonHang(),
     'sua-don-hang' =>(new AdminDonHangController())->postEditDonHang(),
     'chi-tiet-don-hang' =>(new AdminDonHangController())->detailDonHang(),
-
+     // Sản phẩm
+    'danh-sach-san-pham' => (new AdminSanPhamController())->dannhSachSanPham(),
+    'form-them-san-pham' => (new AdminSanPhamController())->formAddSanPham(),
+    'them-danh-san-pham' => (new AdminSanPhamController())->postAddSanPham(),
+    'form-sua-san-pham' => (new AdminSanPhamController())->formEditSanPham(),
+    'sua-san-pham' => (new AdminSanPhamController())->postEditSanPham(),
+    'xoa-san-pham' => (new AdminSanPhamController())->deleteSanPham(),
 
     
 };
