@@ -20,7 +20,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Quản lý danh mục sản phẩm</h1>
+          <h1>Quản lý danh sách sản phẩm</h1>
         </div>
 
       </div>
@@ -35,8 +35,8 @@
 
           <div class="card">
             <div class="card-header">
-           <a href="<?= BASE_URL_ADMIN. '?act=form-them-danh-muc'?>">
-            <button class="btn btn-success">thêm danh mục</button>
+           <a href="<?= BASE_URL_ADMIN. '?act=form-them-san-pham'?>">
+            <button class="btn btn-success">thêm Sản Phẩm</button>
            </a>
             </div>
             <!-- /.card-header -->

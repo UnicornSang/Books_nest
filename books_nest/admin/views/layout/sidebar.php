@@ -45,7 +45,7 @@
           </a>
         </li>
          <li class="nav-item">
-          <a href="<?= BASE_URL_ADMIN. '?act=san_pham'?>" class="nav-link">
+          <a href="<?= BASE_URL_ADMIN. '?act=danh-sach-san-pham'?>" class="nav-link">
             <i class="nav-icon fas fa-book"></i>
             <p>
               danh mục sản phẩm
