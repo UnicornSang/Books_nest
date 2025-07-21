@@ -70,7 +70,7 @@
                       <td><?= $sanPham['luot_xem'] ?> </td>
                       <td><?= $sanPham['ngay_nhap'] ?> </td>
                       <td><?= $sanPham['mo_ta'] ?> </td>
-                      <td><?= $sanPham['danh_muc_id'] ?> </td>
+                      <td><?= $sanPham['ten_danh_muc'] ?> </td>
                       <td><?= $sanPham['trang_thai'] ?> </td>
                       <td>
                         <a href="<?= BASE_URL_ADMIN. '?act=form-sua-san-pham&id_san_pham=' . $sanPham['id'] ?>">

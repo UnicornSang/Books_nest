@@ -10,7 +10,7 @@ class AdminSanPham {
     }
     public function getAllSanPham(){
         try{
-            $sql = 'SELECT * FROM san_pham';
+            $sql = 'SELECT  san_pham.* , danh_muc.ten_danh_muc FROM san_pham INNER JOIN danh_muc ON san_pham.danh_muc_id=danh_muc.id';
             $stmt = $this->conn->prepare($sql);
 
             $stmt->execute();
