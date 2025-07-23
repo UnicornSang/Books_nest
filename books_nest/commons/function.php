@@ -26,3 +26,38 @@ function formatDate($date) {
     // Chuyển đổi định dạng ngày từ 'Y-m-d' sang 'd/m/Y'
     return date("d/m/Y", strtotime($date));
 }
+
+<<<<<<< HEAD
+// thêm file
+
+function uploadFile($file, $folderUpload){
+    $pathStorage = $folderUpload . time() .$file['name'];
+
+    $from = $file['tmp_name'];
+    $to = PATH_ROOT . $pathStorage;
+
+    if(move_uploaded_file($from, $to)){
+        return $pathStorage;
+    }
+    return null;
+}
+
+// xóa file
+function deleteFile($file){
+    $pathDelete = PATH_ROOT .$file;
+    if(file_exists($pathDelete)){
+        unlink($pathDelete);
+    }
+=======
+// Hàm xóa session error
+function deleteSessionError() {
+    if(isset($_SESSION['flash'])) {
+        //Hủy session sau khi đã tải trang
+        unset($_SESSION['flash']);
+        session_unset();
+        session_destroy();
+    }
+
+    
+>>>>>>> 7b1499dc895ac8729a455847de0f3b1865ea6552
+}
