@@ -36,7 +36,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?= BASE_URL_ADMIN. '?act=them-san-pham'?>" method="POST">
+              <form action="<?= BASE_URL_ADMIN. '?act=them-san-pham'?>" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label >Tên sản phẩm</label>
@@ -70,7 +70,7 @@
                   </div>
                   <div class="form-group">
                     <label >Hình ảnh</label>
-                    <input type="text" class="form-control" name="hinh_anh"  placeholder="hinh_anh">
+                    <input type="file" class="form-control" name="hinh_anh"  placeholder="hinh_anh">
                     <?php if (isset($errors['hinh_anh'])) {  ?>
              
 
@@ -114,8 +114,15 @@
                   </div>
                   <div class="form-group">
                     <label >Danh mục</label>
-                    <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục">
+                    <!-- <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục"> -->
+                     <select class="form-control" aria-label="exampleFormControlSelect1" name="danh_muc_id" >
+                     <option selected disabled>Chọn danh mục</option> 
+                     <?php foreach($listDanhMuc as $danhMuc): ?>
+                        <option value="<?= $danhMuc['id']?>"><?= $danhMuc['ten_danh_muc']?></option>
+                      <?php endforeach ?>
+                     </select>
                     <?php if (isset($errors['danh_muc_id'])) {  ?>
+                    
              
 
                     <p class="text-danger"><?=$errors['danh_muc_id'] ?></p>
