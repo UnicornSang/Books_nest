@@ -43,7 +43,7 @@ class AdminDonHang {
        $don_hang_id = $_GET['id_don_hang'];
 
        // lấy ra thông tin của đơn hàng tại bảng đơn hàng
-       $donHang = $this->getDetaiDonHang($don_hang_id);
+       $donHang = $this->getDetailDonHang($don_hang_id);
        // lấy ra thông tin của đơn hàng tại bảng chi tiết đơn hàng
        $sanPhamDonHang = $this->modelDonHang->getListSpPhamDonHang($don_hang_id);
        require_once './views/donhang/detailDonHang.php';
