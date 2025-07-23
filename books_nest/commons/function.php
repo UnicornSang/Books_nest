@@ -27,7 +27,6 @@ function formatDate($date) {
     return date("d/m/Y", strtotime($date));
 }
 
-<<<<<<< HEAD
 // thêm file
 
 function uploadFile($file, $folderUpload){
@@ -48,16 +47,4 @@ function deleteFile($file){
     if(file_exists($pathDelete)){
         unlink($pathDelete);
     }
-=======
-// Hàm xóa session error
-function deleteSessionError() {
-    if(isset($_SESSION['flash'])) {
-        //Hủy session sau khi đã tải trang
-        unset($_SESSION['flash']);
-        session_unset();
-        session_destroy();
-    }
-
-    
->>>>>>> 7b1499dc895ac8729a455847de0f3b1865ea6552
 }
