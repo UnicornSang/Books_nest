@@ -42,18 +42,52 @@ class AdminSanPhamController {
             $trang_thai = $_POST['trang_thai'];
             
             $hinh_anh = $_FILES['hinh_anh'];
+            //lưu hình ảnh
+            $file_thumb = uploadFile($hinh_anh , './uploads/');
             
             $img_array = $_FILES['img_array'];
             //tạo một mảng trống
             $errors = [];
             if (empty($ten_san_pham)) {
-                $errors['ten_san_pham'] = 'tên san pham không để trống';
+                $errors['ten_san_pham'] = 'tên sản phẩm không để trống';
+                # code...
+            }
+            if (empty($gia_san_pham)) {
+                $errors['gia_san_pham'] = 'giá sản phẩm không để trống';
+                # code...
+            }
+            if (empty($gia_khuyen_mai)) {
+                $errors['gia_khuyen_mai'] = 'giá khuyến mãi không để trống';
+                # code...
+            }
+            if (empty($so_luong)) {
+                $errors['so_luong'] = 'số lượng không để trống';
+                # code...
+            }
+            if (empty($luot_xem)) {
+                $errors['luot_xem'] = 'lượt xem không để trống';
+                # code...
+            }
+            if (empty($ngay_nhap)) {
+                $errors['ngay_nhap'] = 'ngày nhập không để trống';
+                # code...
+            }
+            if (empty($mo_ta)) {
+                $errors['mo_ta'] = 'mô tả không để trống';
+                # code...
+            }
+            if (empty($danh_muc_id)) {
+                $errors['danh_muc_id'] = 'danh mục phải chọn';
+                # code...
+            }
+            if (empty($trang_thai)) {
+                $errors['trang_thai'] = 'trạng thái không để trống';
                 # code...
             }
             //nếu có lỗi thì hiển thị sản phẩm
             if (empty($errors)) {
                 // nếu ko lỗi thì tiến hành thêm sản phẩm
-               $this->modelSanPham->insertSanPham($ten_san_pham,$gia_san_pham, $gia_khuyen_mai, $hinh_anh, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai);
+               $this->modelSanPham->insertSanPham($ten_san_pham,$gia_san_pham, $gia_khuyen_mai, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai,$file_thumb);
                header("location:" . BASE_URL_ADMIN . '?act=danh-sach-san-pham');
                exit();
 
@@ -88,7 +122,6 @@ class AdminSanPhamController {
             $ten_san_pham = $_POST['ten_san_pham'];
             $gia_san_pham = $_POST['gia_san_pham'];
             $gia_khuyen_mai = $_POST['gia_khuyen_mai'];
-            $hinh_anh = $_POST['hinh_anh'];
             $so_luong = $_POST['so_luong'];
             $luot_xem = $_POST['luot_xem'];
             $ngay_nhap = $_POST['ngay_nhap'];
@@ -96,6 +129,50 @@ class AdminSanPhamController {
             $danh_muc_id = $_POST['danh_muc_id'];
             $trang_thai = $_POST['trang_thai'];
             //tạo một mảng trống
+
+             $hinh_anh = $_FILES['hinh_anh'];
+            //lưu hình ảnh
+            $file_thumb = uploadFile($hinh_anh , './uploads/');
+            
+            $img_array = $_FILES['img_array'];
+            //tạo một mảng trống
+            $errors = [];
+            if (empty($ten_san_pham)) {
+                $errors['ten_san_pham'] = 'tên sản phẩm không để trống';
+                # code...
+            }
+            if (empty($gia_san_pham)) {
+                $errors['gia_san_pham'] = 'giá sản phẩm không để trống';
+                # code...
+            }
+            if (empty($gia_khuyen_mai)) {
+                $errors['gia_khuyen_mai'] = 'giá khuyến mãi không để trống';
+                # code...
+            }
+            if (empty($so_luong)) {
+                $errors['so_luong'] = 'số lượng không để trống';
+                # code...
+            }
+            if (empty($luot_xem)) {
+                $errors['luot_xem'] = 'lượt xem không để trống';
+                # code...
+            }
+            if (empty($ngay_nhap)) {
+                $errors['ngay_nhap'] = 'ngày nhập không để trống';
+                # code...
+            }
+            if (empty($mo_ta)) {
+                $errors['mo_ta'] = 'mô tả không để trống';
+                # code...
+            }
+            if (empty($danh_muc_id)) {
+                $errors['danh_muc_id'] = 'danh mục phải chọn';
+                # code...
+            }
+            if (empty($trang_thai)) {
+                $errors['trang_thai'] = 'trạng thái không để trống';
+                # code...
+            }
             $errors = [];
             if (empty($ten_san_pham)) {
                 $errors['ten_san_pham'] = 'tên san pham không để trống';

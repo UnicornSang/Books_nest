@@ -115,50 +115,62 @@
                     <label >Mô tả</label>
                     <textarea name="mo_ta"  class="form-control" placeholder="nhập mô ta"><?= $sanPham['mo_ta'] ?></textarea>
                   </div>
-                  <div class="form-group">
+                   <div class="form-group">
                     <label >Danh mục</label>
-                    <input type="text" class="form-control" name="danh_muc_id" value="<?= $sanPham['danh_muc_id'] ?>" placeholder="danh mục">
+                    <!-- <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục"> -->
+                     <select class="form-control" aria-label="exampleFormControlSelect1" name="danh_muc_id" >
+                     <option selected disabled>Chọn danh mục</option> 
+                     <?php foreach($listDanhMuc as $danhMuc): ?>
+                        <option value="<?= $danhMuc['id']?>"><?= $danhMuc['ten_danh_muc']?></option>
+                      <?php endforeach ?>
+                     </select>
                     <?php if (isset($errors['danh_muc_id'])) {  ?>
+                    
              
 
                     <p class="text-danger"><?=$errors['danh_muc_id'] ?></p>
 
                     <?php } ?>
                   </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label >Trạng thái</label>
-                    <input type="text" class="form-control" name="trang_thai" value="<?= $sanPham['trang_thai'] ?>" placeholder="trạng thái">
-                    <?php if (isset($errors['ten_san_pham'])) {  ?>
+                    <!-- <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục"> -->
+                     <select class="form-control" aria-label="exampleFormControlSelect1" name="trang_thai" >
+                     <option selected disabled>Chọn trạng thái</option> 
+                     <option value="1">Còn hàng</option>
+                     <option value="2">Hết hàng</option>
+                     </select>
+                    <?php if (isset($errors['trang_thai'])) {  ?>
+                    
              
 
                     <p class="text-danger"><?=$errors['trang_thai'] ?></p>
 
                     <?php } ?>
                   </div>
-                    
                   
                 
                 </div>
-              <!-- /.card-body -->
+                <!-- /.card-body -->
 
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </form>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+         </div>
+         </div>
+          
+         
+
+         </section>
+
+<!-- Footer -->
+<?php include './views/layout/footer.php'; ?>
+<!-- end footer -->
 
 
+</body>
 
-  </section>
-
-  <!-- Footer -->
-  <?php include './views/layout/footer.php'; ?>
-  <!-- end footer -->
-
-
-  </body>
-
-  </html>
+</html>

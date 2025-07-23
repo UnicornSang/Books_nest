@@ -22,11 +22,11 @@ class AdminSanPham {
     }
     }
 
-     public function insertSanPham($ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $hinh_anh, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai){
+     public function insertSanPham($ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai, $hinh_anh){
         try{
-            $sql = 'INSERT INTO san_pham (ten_san_pham, gia_san_pham, gia_khuyen_mai, hinh_anh, so_luong, luot_xem, ngay_nhap, mo_ta, danh_muc_id, trang_thai)
+            $sql = 'INSERT INTO san_pham (ten_san_pham, gia_san_pham, gia_khuyen_mai, so_luong, luot_xem, ngay_nhap, mo_ta, danh_muc_id, trang_thai,hinh_anh)
             
-            VALUE (:ten_san_pham, :gia_san_pham, :gia_khuyen_mai, :hinh_anh, :so_luong, :luot_xem, :ngay_nhap, :mo_ta, :danh_muc_id, :trang_thai)';
+            VALUE (:ten_san_pham, :gia_san_pham, :gia_khuyen_mai, :so_luong, :luot_xem, :ngay_nhap, :mo_ta, :danh_muc_id, :trang_thai,:hinh_anh)';
             
             $stmt = $this->conn->prepare($sql);
 

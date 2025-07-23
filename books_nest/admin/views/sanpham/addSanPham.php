@@ -129,17 +129,22 @@
 
                     <?php } ?>
                   </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label >Trạng thái</label>
-                    <input type="text" class="form-control" name="trang_thai"  placeholder="trạng thái">
-                    <?php if (isset($errors['ten_san_pham'])) {  ?>
+                    <!-- <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục"> -->
+                     <select class="form-control" aria-label="exampleFormControlSelect1" name="trang_thai" >
+                     <option selected disabled>Chọn trạng thái</option> 
+                     <option value="1">Còn hàng</option>
+                     <option value="2">Hết hàng</option>
+                     </select>
+                    <?php if (isset($errors['trang_thai'])) {  ?>
+                    
              
 
                     <p class="text-danger"><?=$errors['trang_thai'] ?></p>
 
                     <?php } ?>
                   </div>
-                    
                   
                 
                 </div>

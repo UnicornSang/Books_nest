@@ -65,13 +65,15 @@
                       <td><?= $sanPham['ten_san_pham'] ?> </td>
                       <td><?= $sanPham['gia_san_pham'] ?> </td>
                       <td><?= $sanPham['gia_khuyen_mai'] ?> </td>
-                      <td><img src="<?=BASE_URL . $sanPham['hinh_anh'] ?>" style="100px" alt=""></td>
+                      <td>
+                     
+                      <img src="<?=BASE_URL . $sanPham['hinh_anh'] ?>" style="100px" alt=""></td>
                       <td><?= $sanPham['so_luong'] ?> </td>
                       <td><?= $sanPham['luot_xem'] ?> </td>
                       <td><?= $sanPham['ngay_nhap'] ?> </td>
                       <td><?= $sanPham['mo_ta'] ?> </td>
                       <td><?= $sanPham['ten_danh_muc'] ?> </td>
-                      <td><?= $sanPham['trang_thai'] ?> </td>
+                      <td><?= $sanPham['trang_thai'] ==1 ? 'còn hàng' : 'hết hàng' ?> </td>
                       <td>
                         <a href="<?= BASE_URL_ADMIN. '?act=form-sua-san-pham&id_san_pham=' . $sanPham['id'] ?>">
                          <button class="btn btn-warning" >Sửa</button>
