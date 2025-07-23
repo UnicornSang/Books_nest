@@ -26,25 +26,3 @@ function formatDate($date) {
     // Chuyển đổi định dạng ngày từ 'Y-m-d' sang 'd/m/Y'
     return date("d/m/Y", strtotime($date));
 }
-
-// thêm file
-
-function uploadFile($file, $folderUpload){
-    $pathStorage = $folderUpload . time() .$file['name'];
-
-    $from = $file['tmp_name'];
-    $to = PATH_ROOT . $pathStorage;
-
-    if(move_uploaded_file($from, $to)){
-        return $pathStorage;
-    }
-    return null;
-}
-
-// xóa file
-function deleteFile($file){
-    $pathDelete = PATH_ROOT .$file;
-    if(file_exists($pathDelete)){
-        unlink($pathDelete);
-    }
-}

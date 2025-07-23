@@ -36,7 +36,7 @@ class AdminDonHangController {
        
         if ($donHang) {
             require_once './views/donhang/editDonHang.php';
-            // deleteSessionError();
+            deleteSessionError();
         }else{
             header("location:" . BASE_URL_ADMIN . '?act=don-hang');
             exit();
@@ -46,7 +46,7 @@ class AdminDonHangController {
 
     public function postEditDonHang(){
         // hàm sử lý thêm dữ liệu
-        if ($_SERVER['REQUEST_METHOD']=='POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //lấy ra dữ liệu
             $don_hang_id = $_POST['don_hang_id'];
 
@@ -74,9 +74,9 @@ class AdminDonHangController {
                 $error['trang_thai_id'] = 'Trạng thái đơn hàng không được để trống';
             }
 
-            $_SESSION['errors'] = $error;  
+            $_SESSION['error'] = $errors;  
             // nếu không có lỗi thì tiến hành cập nhật đơn hàng
-            if (empty($error)) {
+            if (empty($errors)) {
                 $this->modelDonHang->updateDonHang($don_hang_id,
                                                     $ten_nguoi_nhan, 
                                                     $sdt_nguoi_nhan, 
