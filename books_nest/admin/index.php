@@ -10,17 +10,28 @@ require_once '../commons/function.php'; // Hàm hỗ trợ
 require_once './controllers/AdminDanhMucController.php';
 require_once './controllers/AdminSanPhamController.php';
 require_once './controllers/AdminDonHangController.php';
+require_once './controllers/AdminBaoCaoThongKeController.php';
+require_once './controllers/AdminTaiKhoanController.php';
+
 // Require toàn bộ file Models
 
 require_once './models/AdminDanhMuc.php';
 require_once './models/AdminSanPham.php';
 require_once './models/AdminDonHang.php';
+require_once './models/AdminTaiKhoan.php';
 // Route
 $act = $_GET['act'] ?? '/';
 
 // Để bảo bảo tính chất chỉ gọi 1 hàm Controller để xử lý request thì mình sử dụng match
 
 match ($act) {
+    // route báo cáo thông kê
+    '/' =>(new AdminBaoCaoThongKeController())->home(),
+
+
+
+
+
     // route danh muc
     'danh-muc' =>(new AdminDanhMucController())->dannhSachDanhMuc(),
     'form-them-danh-muc' =>(new AdminDanhMucController())->formAddDanhMuc(),
@@ -41,6 +52,13 @@ match ($act) {
     'form-sua-san-pham' => (new AdminSanPhamController())->formEditSanPham(),
     'sua-san-pham' => (new AdminSanPhamController())->postEditSanPham(),
     'xoa-san-pham' => (new AdminSanPhamController())->deleteSanPham(),
+
+    //router quản lý tài khoản
+        //quản trị
+        'list-tai-khoan-quan-tri' =>(new AdminTaiKhoanController())->danhSachQuanTri(),
+        'form-them-quan-tri' =>(new AdminTaiKhoanController())->formAddQuanTri(),
+        'them-khoan-quan-tri' =>(new AdminTaiKhoanController())->postAddQuanTri(),
+
 
     
 };

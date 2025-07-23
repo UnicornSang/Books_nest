@@ -19,14 +19,14 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-10">
-          <h1>Quản lý danh sách đơn hàng - Đơn hàng: <?= $donHang['ma_don_hang'] ?></h1>
+          <h1>Quản lý danh sách đơn hàng - Đơn hàng: <?= $donHang['ma_don_hang']?></h1>
         </div>
         <div class="col-sm-2">
             <form action="" method="post">
                 <select name="" id="" class="form-control">
                     <?php foreach ($listTrangThaiDonHang as $key=>$trangThai): ?>
                     <option 
-                        <?= $trangThai['id'] < $donHang['trang_thai_id'] ? 'disabled' : '' ?> 
+                        <?= $trangThai['id'] < $donHang['trang_thai_id'] ?'disabled' : '' ?> 
                         <?= $trangThai['id'] == $donHang['trang_thai_id'] ? 'selected':''?>
                         value="<?= $trangThai['id'] ?>">
                         <?= $trangThai['ten_trang_thai'] ?>

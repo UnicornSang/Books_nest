@@ -45,7 +45,7 @@ class AdminDonHang {
        // lấy ra thông tin của đơn hàng tại bảng đơn hàng
        $donHang = $this->getDetailDonHang($don_hang_id);
        // lấy ra thông tin của đơn hàng tại bảng chi tiết đơn hàng
-       $sanPhamDonHang = $this->modelDonHang->getListSpPhamDonHang($don_hang_id);
+       $sanPhamDonHang = $this->getListSpDonHang($don_hang_id);
        require_once './views/donhang/detailDonHang.php';
     }
     
