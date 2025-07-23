@@ -19,7 +19,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Quản lý danh mục sản phẩm</h1>
+          <h1>Quản lý danh sản phẩm</h1>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
         <div class="col-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">sửa sản phẩm </h3>
+              <h3 class="card-title">sửa sản phẩm <?= $sanPham['ten_san_pham'] ?></h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
