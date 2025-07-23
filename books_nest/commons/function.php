@@ -26,3 +26,15 @@ function formatDate($date) {
     // Chuyển đổi định dạng ngày từ 'Y-m-d' sang 'd/m/Y'
     return date("d/m/Y", strtotime($date));
 }
+
+// Hàm xóa session error
+function deleteSessionError() {
+    if(isset($_SESSION['flash'])) {
+        //Hủy session sau khi đã tải trang
+        unset($_SESSION['flash']);
+        session_unset();
+        session_destroy();
+    }
+
+    
+}

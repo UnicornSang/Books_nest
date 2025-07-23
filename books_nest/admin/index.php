@@ -1,5 +1,5 @@
 <?php 
-
+session_start(); // Bắt đầu phiên làm việc
 // Require file Common
 require_once '../commons/env.php'; // Khai báo biến môi trường
 require_once '../commons/function.php'; // Hàm hỗ trợ
