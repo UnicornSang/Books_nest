@@ -101,7 +101,7 @@ class AdminSanPhamController {
             //nếu có lỗi thì hiển thị sản phẩm
             if (empty($errors)) {
                 // nếu ko lỗi thì tiến hành thêm sản phẩm
-               $this->modelSanPham->insertSanPham($ten_san_pham,$gia_san_pham, $gia_khuyen_mai, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai,$file_thumb);
+               $san_pham_id=$this->modelSanPham->insertSanPham($ten_san_pham,$gia_san_pham, $gia_khuyen_mai, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai,$file_thumb);
                header("location:" . BASE_URL_ADMIN . '?act=danh-sach-san-pham');
                exit();
 

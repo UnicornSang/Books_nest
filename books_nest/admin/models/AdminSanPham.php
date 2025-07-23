@@ -50,7 +50,8 @@ class AdminSanPham {
                
             ]);
 
-            return $stmt->fetch();
+            // return $stmt->fetch();
+            return $this->conn->lastInsertId();
         }catch(Exception $e){
         echo "lỗi" . $e->getMessage();
 
