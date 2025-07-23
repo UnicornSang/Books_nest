@@ -67,7 +67,7 @@
                       <td><?= $sanPham['gia_khuyen_mai'] ?> </td>
                       <td>
                      
-                      <img src="<?=BASE_URL . $sanPham['hinh_anh'] ?>" style="100px" alt=""></td>
+                      <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" style="width: 100px" alt=""></td>
                       <td><?= $sanPham['so_luong'] ?> </td>
                       <td><?= $sanPham['luot_xem'] ?> </td>
                       <td><?= $sanPham['ngay_nhap'] ?> </td>

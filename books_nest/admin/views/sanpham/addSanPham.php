@@ -100,7 +100,7 @@
                   </div>
                   <div class="form-group">
                     <label >Ngày nhập</label>
-                    <input type="text" class="form-control" name="ngay_nhap"  placeholder="ngày nhập">
+                    <input type="date" class="form-control" name="ngay_nhap"  placeholder="ngày nhập">
                     <?php if (isset($errors['ngay_nhap'])) {  ?>
              
 

@@ -103,11 +103,11 @@
                   </div>
                   <div class="form-group">
                     <label >Ngày nhập</label>
-                    <input type="text" class="form-control" name="ngay_nhap" value="<?= $sanPham['ngay_nhap'] ?>"  placeholder="ngày nhập">
+                    <input type="date" class="form-control" name="ngay_nhap" value="<?= $sanPham['ngay_nhap'] ?>"  placeholder="ngày nhập">
                     <?php if (isset($errors['ngay_nhap'])) {  ?>
              
 
-                    <p class="text-danger"><?=$errors['ten_san_pham'] ?></p>
+                    <p class="text-danger"><?=$errors['ngay_nhap'] ?></p>
 
                     <?php } ?>
                   </div>
@@ -117,6 +117,8 @@
                   </div>
                    <div class="form-group">
                     <label >Danh mục</label>
+                    <!-- <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục"> -->
+                      <label >Danh mục</label>
                     <!-- <input type="text" class="form-control" name="danh_muc_id"  placeholder="danh mục"> -->
                      <select class="form-control" aria-label="exampleFormControlSelect1" name="danh_muc_id" >
                      <option selected disabled>Chọn danh mục</option> 

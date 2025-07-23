@@ -30,8 +30,8 @@ class AdminSanPham {
             
             $stmt = $this->conn->prepare($sql);
 
-            $stmt->execute([':ten_san_pham' => $ten_san_pham,':gia_san_pham' => $gia_san_pham, ':gia_khuyen_mai' => $gia_khuyen_mai, ':hinh_anh' => $hinh_anh,
-            ':so_luong'=> $so_luong,':luot_xem'=> $luot_xem,':ngay_nhap'=> $ngay_nhap,':mo_ta' => $mo_ta,':danh_muc_id'=> $danh_muc_id,':trang_thai'=> $trang_thai]);  
+            $stmt->execute([':ten_san_pham' => $ten_san_pham,':gia_san_pham' => $gia_san_pham, ':gia_khuyen_mai' => $gia_khuyen_mai, 
+            ':so_luong'=> $so_luong,':luot_xem'=> $luot_xem,':ngay_nhap'=> $ngay_nhap,':mo_ta' => $mo_ta,':danh_muc_id'=> $danh_muc_id,':trang_thai'=> $trang_thai,':hinh_anh' => $hinh_anh,]);  
 
             return true;
         }catch(Exception $e){

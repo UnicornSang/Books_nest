@@ -40,11 +40,30 @@ function uploadFile($file, $folderUpload){
     }
     return null;
 }
+// function uploadFile($file, $path = './uploads/') {
+//     if ($file['error'] == 0) {
+//         $filename = time() . '-' . basename($file['name']);
+//         $destination = $path . $filename;
+//         move_uploaded_file($file['tmp_name'], $destination);
+//         return $filename; //  Trả về chuỗi tên file
+//     }
+//     return null;
+// }
 
 // xóa file
 function deleteFile($file){
     $pathDelete = PATH_ROOT .$file;
     if(file_exists($pathDelete)){
         unlink($pathDelete);
+    }
+}
+
+// xóa session sau khi load trang
+function deleteSessionError(){
+    if(isset($_SESSION['flash'])){
+        //hủy session sau khi tải trang
+        unset($_SESSION['flash']);
+        session_unset();
+        session_destroy();
     }
 }
