@@ -41,70 +41,70 @@
                   <div class="form-group">
                     <label >Tên sản phẩm</label>
                     <input type="text" class="form-control" name="ten_san_pham"  placeholder="tên sản phẩm">
-                    <?php if (isset($_SESSION['ten_san_pham'])) {  ?>
+                    <?php if (isset($_SESSION['error']['ten_san_pham'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['ten_san_pham'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['ten_san_pham'] ?></p>
 
                     <?php } ?>
                   </div>
                   <div class="form-group">
                     <label >Gía sản phẩm</label>
                     <input type="text" class="form-control" name="gia_san_pham"  placeholder="giá sản phẩm">
-                    <?php if (isset($_SESSION['gia_san_pham'])) {  ?>
+                    <?php if (isset($_SESSION['error']['gia_san_pham'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['gia_san_pham'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['gia_san_pham'] ?></p>
 
                     <?php } ?>
                   </div>
                   <div class="form-group">
                     <label >Gía khuyến mãi</label>
                     <input type="text" class="form-control" name="gia_khuyen_mai"  placeholder="giá khuyến mãi">
-                    <?php if (isset($_SESSION['gia_khuyen_mai'])) {  ?>
+                    <?php if (isset($_SESSION['error']['gia_khuyen_mai'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['gia_khuyen_mai'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['gia_khuyen_mai'] ?></p>
 
                     <?php } ?>
                   </div>
                   <div class="form-group">
                     <label >Hình ảnh</label>
                     <input type="file" class="form-control" name="hinh_anh"  placeholder="hinh_anh">
-                    <?php if (isset($_SESSION['hinh_anh'])) {  ?>
+                    <?php if (isset($_SESSION['error']['hinh_anh'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['hinh_anh'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['hinh_anh'] ?></p>
 
                     <?php } ?>
                   </div>
                   <div class="form-group">
                     <label >Số lượng</label>
                     <input type="text" class="form-control" name="so_luong"  placeholder="số lượng">
-                    <?php if (isset($_SESSION['so_luong'])) {  ?>
+                    <?php if (isset($_SESSION['error']['so_luong'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['so_luong'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['so_luong'] ?></p>
 
                     <?php } ?>
                   </div>
                   <div class="form-group">
                     <label >Lượt xem</label>
                     <input type="text" class="form-control" name="luot_xem"  placeholder="lượt xem">
-                    <?php if (isset($_SESSION['luot_xem'])) {  ?>
+                    <?php if (isset($_SESSION['error']['luot_xem'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['luot_xem'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['luot_xem'] ?></p>
 
                     <?php } ?>
                   </div>
                   <div class="form-group">
                     <label >Ngày nhập</label>
                     <input type="date" class="form-control" name="ngay_nhap"  placeholder="ngày nhập">
-                    <?php if (isset($_SESSION['ngay_nhap'])) {  ?>
+                    <?php if (isset($_SESSION['error']['ngay_nhap'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['ten_san_pham'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['ten_san_pham'] ?></p>
 
                     <?php } ?>
                   </div>
@@ -121,11 +121,11 @@
                         <option value="<?= $danhMuc['id']?>"><?= $danhMuc['ten_danh_muc']?></option>
                       <?php endforeach ?>
                      </select>
-                    <?php if (isset($_SESSION['danh_muc_id'])) {  ?>
+                    <?php if (isset($_SESSION['error']['danh_muc_id'])) {  ?>
                     
              
 
-                    <p class="text-danger"><?=$_SESSION['danh_muc_id'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['danh_muc_id'] ?></p>
 
                     <?php } ?>
                   </div>
@@ -137,11 +137,11 @@
                      <option value="1">Còn hàng</option>
                      <option value="2">Hết hàng</option>
                      </select>
-                    <?php if (isset($_SESSION['trang_thai'])) {  ?>
+                    <?php if (isset($_SESSION['error']['trang_thai'])) {  ?>
                     
              
 
-                    <p class="text-danger"><?=$_SESSION['trang_thai'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['trang_thai'] ?></p>
 
                     <?php } ?>
                   </div>
