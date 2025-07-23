@@ -119,6 +119,7 @@ class AdminSanPhamController {
         $id = $_GET['id_san_pham'];
         
         $sanPham = $this->modelSanPham->getDetaiSanPham($id);
+        $listDanhMuc = $this->modelDanhMuc->getAllDanhMuc();
        
         if ($sanPham) {
             require_once './views/sanpham/editSanPham.php';
