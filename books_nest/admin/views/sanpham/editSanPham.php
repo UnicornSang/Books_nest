@@ -36,7 +36,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="<?= BASE_URL_ADMIN . '?act=sua-san-pham' ?>" method="POST">
+            <form action="<?= BASE_URL_ADMIN . '?act=sua-san-pham' ?>" method="POST" enctype="multipart/form-data">
 
               <input type="text" name="id" hidden value="<?= $sanPham['id']?>">
               
@@ -73,7 +73,7 @@
                   </div>
                   <div class="form-group">
                     <label >Hình ảnh</label>
-                    <input type="text" class="form-control" name="hinh_anh" value="<?= $sanPham['hinh_anh'] ?>"  placeholder="hinh_anh">
+                    <input type="file" class="form-control" name="hinh_anh" value="<?= $sanPham['hinh_anh'] ?>"  placeholder="hinh_anh">
                     <?php if (isset($errors['hinh_anh'])) {  ?>
              
 

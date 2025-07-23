@@ -2,9 +2,11 @@
 
 class AdminSanPhamController {
     public $modelSanPham;
+    public $modelDanhMuc;
     public function __construct()
     {
         $this->modelSanPham = new AdminSanPham();
+        $this->modelDanhMuc = new AdminDanhMuc();
     }
 
     public function dannhSachSanPham(){
@@ -16,6 +18,7 @@ class AdminSanPhamController {
 
     public function formAddSanPham(){
         // hàm hiển thị form nhập
+         $listDanhMuc = $this->modelDanhMuc->getAllDanhMuc();
         require_once './views/sanpham/addSanPham.php';
     }
 
@@ -30,7 +33,7 @@ class AdminSanPhamController {
             $ten_san_pham = $_POST['ten_san_pham'];
             $gia_san_pham = $_POST['gia_san_pham'];
             $gia_khuyen_mai = $_POST['gia_khuyen_mai'];
-            $hinh_anh = $_POST['hinh_anh'];
+            
             $so_luong = $_POST['so_luong'];
             $luot_xem = $_POST['luot_xem'];
             $ngay_nhap = $_POST['ngay_nhap'];
@@ -38,6 +41,9 @@ class AdminSanPhamController {
             $danh_muc_id = $_POST['danh_muc_id'];
             $trang_thai = $_POST['trang_thai'];
             
+            $hinh_anh = $_FILES['hinh_anh'];
+            
+            $img_array = $_FILES['img_array'];
             //tạo một mảng trống
             $errors = [];
             if (empty($ten_san_pham)) {

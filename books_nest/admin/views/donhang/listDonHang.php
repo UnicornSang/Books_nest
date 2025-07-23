@@ -75,14 +75,14 @@
                   <?php endforeach ?>
                   
                   </tfoot>
-                  <th>STT</th>
+                  <!-- <th>STT</th>
                     <th>Mã đơn hàng</th>
                     <th>Tên người nhận</th>
                     <th>Số điện thoại</th>
                     <th>Ngày đặt</th>
                     <th>Tổng tiền</th>
                     <th>Trạng thái</th>
-                    <th>Thao tác</th>
+                    <th>Thao tác</th> -->
               </table>
             </div>
             <!-- /.card-body -->
