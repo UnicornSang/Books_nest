@@ -30,10 +30,10 @@ public function insertTaiKhoan($ho_ten, $email, $password, $chuc_vu_id){
 
             $stmt->execute([
 
-                ':ho_ten' => $ho_ten,
-                ':email' => $email,
-                ':password' => $password,
-                ':chuc_vu_id' => $chuc_vu_id,
+                ':ho_ten'=>$ho_ten,
+                ':email'=>$email,
+                ':password'=>$password,
+                ':chuc_vu_id'=>$chuc_vu_id,
 
             ]);
 
