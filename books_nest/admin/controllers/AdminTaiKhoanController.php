@@ -54,8 +54,8 @@ class AdminTaiKhoanController
                 $password = password_hash('123@123ab', PASSWORD_BCRYPT);
 
                 $chuc_vu_id = 1;
-                
-                $this->modelTaiKhoan->insertTaiKhoan($ho_ten,$email,$password,$chuc_vu_id);
+
+                $this->modelTaiKhoan->insertTaiKhoan($ho_ten, $email, $password, $chuc_vu_id);
 
 
                 header("location:" . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
