@@ -68,6 +68,63 @@ class AdminTaiKhoanController
             }
         }
     }
+
+
+    public function formEditQuanTri()
+    {
+        $id_quan_tri = $_GET['id_quan_tri'];
+        $quanTri = $this->modelTaiKhoan->getDetaiTaikhoan($id_quan_tri);
+
+        require_once './views/taikhoan/quantri/editQuanTri.php';
+
+        deleteSessionError();
+    }
+
+    public function postEditQuanTri()
+    {
+        // hàm sử lý thêm dữ liệu
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            //lấy ra dữ liệu
+            $quan_tri_id = $_POST['quan_tri_id'];
+
+            $ho_ten = $_POST['ho_ten'] ?? '';
+            $email = $_POST['email'] ?? '';
+            $so_dien_thoai = $_POST['so_dien_thoai'] ?? '';
+            $trang_thai = $_POST['trang_thai'] ?? '';
+
+            $errors = [];
+            if (empty($ho_ten)) {
+                $errors['ho_ten'] = 'Tên không được để trống';
+            }
+            if (empty($email)) {
+                $errors['email'] = 'Email không được để trống';
+            }
+            if (empty($trang_thai)) {
+                $errors['trang_thai'] = 'vui lòng chọn trạng thái';
+            }
+
+
+            $_SESSION['error'] = $errors;
+
+            if (empty($errors)) {
+                $this->modelTaiKhoan->updateTaiKhoan(
+                    $quan_tri_id,
+                    $ho_ten,
+                    $email,
+                    $so_dien_thoai,
+                    $trang_thai,
+
+                );
+                header("location:" . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
+                exit();
+            } else {
+                // nếu có lỗi thì trả về form và lỗi}
+                $_SESSION['flash'] = true;
+                header("location:" . BASE_URL_ADMIN . '?act=form-sua-quan-trig&id_quan_tri=');
+                exit();
+            }
+        }
+    }
 }
 
 

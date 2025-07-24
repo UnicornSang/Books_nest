@@ -42,6 +42,57 @@ public function insertTaiKhoan($ho_ten, $email, $password, $chuc_vu_id){
             echo "lỗi" . $e->getMessage();
         }
     }
+    public function getDetaiTaikhoan($id){
+        try{
+            $sql = 'SELECT * FROM tai_khoan WHERE id = :id ';
+            
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([
+                ':id' => $id,
+               
+            ]);
+
+            return $stmt->fetch();
+        }catch(Exception $e){
+        echo "lỗi" . $e->getMessage();
+
+    }
+    }
+
+    public function updateTaiKhoan($id, $ho_ten, $email, $so_dien_thoai, $trang_thai){
+        try{
+            $sql = 'UPDATE tai_khoan SET 
+            ho_ten = :ho_ten,
+            email =:email,
+            so_dien_thoai = :so_dien_thoai,
+            trang_thai = :trang_thai       
+            
+            WHERE id = :id';
+            
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([
+                ':ho_ten' => $ho_ten,
+                ':email' => $email,    
+                ':so_dien_thoai' => $so_dien_thoai,
+                ':trang_thai' => $trang_thai,
+                ':id' => $id,
+                
+            ]);
+
+            return true;
+        }catch(Exception $e){
+        echo "lỗi" . $e->getMessage();
+
+    }
+    }
+
+
+
+
+
+
     
 }
 
