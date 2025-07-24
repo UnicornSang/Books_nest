@@ -57,7 +57,7 @@ match ($act) {
         //quản trị
         'list-tai-khoan-quan-tri' =>(new AdminTaiKhoanController())->danhSachQuanTri(),
         'form-them-quan-tri' =>(new AdminTaiKhoanController())->formAddQuanTri(),
-        'them-khoan-quan-tri' =>(new AdminTaiKhoanController())->postAddQuanTri(),
+        'them-quan-tri' =>(new AdminTaiKhoanController())->postAddQuanTri(),
 
 
     

@@ -26,7 +26,7 @@ class AdminDanhMuc {
         try{
             $sql = 'INSERT INTO danh_muc (ten_danh_muc, mo_ta)
             
-            VALUE (:ten_danh_muc, :mo_ta)';
+            VALUES (:ten_danh_muc, :mo_ta)';
             
             $stmt = $this->conn->prepare($sql);
 

@@ -36,7 +36,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="<?= BASE_URL_ADMIN . '?act=them-danh-muc' ?>" method="POST">
+                        <form action="<?= BASE_URL_ADMIN . '?act=them-quan-tri' ?>" method="POST">
                             <div class="card-body">
                                 <div class="form-group ">
                                     <label>Họ tên</label>
@@ -47,20 +47,24 @@
                                         <p class="text-danger"><?= $_SESSION['error']['ho_ten'] ?></p>
 
                                     <?php } ?>
-                                    <div class="form-group ">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" name="email" placeholder="nhập email">
-                                        <?php if (isset($_SESSION['error']['email'])) {  ?>
+                                </div>
+                                <div class="form-group ">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="nhập email">
+                                    <?php if (isset($_SESSION['error']['email'])) {  ?>
 
 
-                                            <p class="text-danger"><?= $_SESSION['error']['email'] ?></p>
+                                        <p class="text-danger"><?= $_SESSION['error']['email'] ?></p>
 
-                                        <?php } ?>
-                                        <!-- /.card-body -->
+                                    <?php } ?>
+                                </div>
+                                <!-- /.card-body -->
 
-                                        <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+
+                            </div>
                         </form>
                     </div>
                 </div>
