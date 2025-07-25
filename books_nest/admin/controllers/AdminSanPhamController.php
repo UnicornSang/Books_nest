@@ -134,6 +134,13 @@ class AdminSanPhamController {
 
         // kiểm tra xem dữ liệu được submit hay không
         if ($_SERVER['REQUEST_METHOD']=='POST') {
+        //     echo '<pre>';
+        // echo 'Dữ liệu POST: ';
+        // var_dump($_POST); // Hiển thị tất cả dữ liệu từ form (text, number, select...)
+        // echo 'Dữ liệu FILES (ảnh): ';
+        // var_dump($_FILES); // Hiển thị dữ liệu liên quan đến file upload (ảnh)
+        // echo '</pre>';
+        // die();
             //lấy ra dữ liệu
             $id = $_POST['id'];
             $ten_san_pham = $_POST['ten_san_pham'];

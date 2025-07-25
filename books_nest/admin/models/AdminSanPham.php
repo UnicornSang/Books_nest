@@ -58,19 +58,20 @@ class AdminSanPham {
     }
     }
 
-    public function updateSanPham($id,$ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $hinh_anh, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai){
+    public function updateSanPham($id,$ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $luot_xem, $ngay_nhap, $mo_ta, $danh_muc_id, $trang_thai,$hinh_anh){
         try{
             $sql = 'UPDATE san_pham SET 
     ten_san_pham = :ten_san_pham,
     gia_san_pham = :gia_san_pham,
     gia_khuyen_mai = :gia_khuyen_mai,
-    hinh_anh = :hinh_anh,
+    
     so_luong = :so_luong,
     luot_xem = :luot_xem,
     ngay_nhap = :ngay_nhap,
     mo_ta = :mo_ta,
     danh_muc_id = :danh_muc_id,
-    trang_thai = :trang_thai
+    trang_thai = :trang_thai,
+    hinh_anh = :hinh_anh
     WHERE id = :id';
             
             $stmt = $this->conn->prepare($sql);
