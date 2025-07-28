@@ -228,6 +228,10 @@ class AdminTaiKhoanController
             }
         }
     }
+
+    public function detailKhachHang(){
+        
+    }
 }
 
 
