@@ -215,6 +215,15 @@ class AdminSanPhamController {
             }
         }
     }
+public function detailSanPham(){
+    if(isset($_GET['id_san_pham'])){
+        $id = $_GET['id_san_pham'];
+        $sanPhamMoldel = new AdminSanPham();
+        $sanPham=$sanPhamMoldel->getDetaiSanPham($id);
+        require_once './views/sanpham/chitetsanpham.php';
+    }
+}
+
     public function deleteSanPham(){
          $id = $_GET['id_san_pham'];
 

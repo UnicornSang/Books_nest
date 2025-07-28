@@ -41,13 +41,15 @@ class AdminSanPham {
     }
      public function getDetaiSanPham($id){
         try{
-            $sql = 'SELECT * FROM san_pham WHERE id = :id ';
+            $sql = 'SELECT san_pham.*, danh_muc.ten_danh_muc 
+                FROM san_pham 
+                INNER JOIN danh_muc ON san_pham.danh_muc_id = danh_muc.id 
+                WHERE san_pham.id = :id';
             
             $stmt = $this->conn->prepare($sql);
 
             $stmt->execute([
-                ':id' => $id,
-               
+                ':id' => $id,   
             ]);
 
             return $stmt->fetch();

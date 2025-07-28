@@ -9,7 +9,10 @@ class HomeController
     }
     
 public function Home(){
-    echo "đây là hom";
+    require_once './views/layout/header.php';
+    require_once './views/layout/menu.php';
+    require_once './views/home.php';
+    require_once './views/layout/footer.php';
 }
 public function trangChu(){
     echo " đây là trang chủ";

@@ -48,6 +48,7 @@ match ($act) {
      // Sản phẩm
     'danh-sach-san-pham' => (new AdminSanPhamController())->dannhSachSanPham(),
     'form-them-san-pham' => (new AdminSanPhamController())->formAddSanPham(),
+    'form-chi-tiet-san-pham' =>(new AdminSanPhamController())->detailSanPham(),
     'them-san-pham' => (new AdminSanPhamController())->postAddSanPham(),
     'form-sua-san-pham' => (new AdminSanPhamController())->formEditSanPham(),
     'sua-san-pham' => (new AdminSanPhamController())->postEditSanPham(),
