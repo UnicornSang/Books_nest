@@ -268,8 +268,18 @@ class AdminSanPhamController
         $id = $_GET['id_san_pham'];
 
         $sanPham = $this->modelSanPham->getDetaiSanPham($id);
+        $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         if ($sanPham) {
+            deleteFile($sanPham['hinh_anh']);
             $this->modelSanPham->destroySanPham($id);
+           
+        }
+        if ($listAnhSanPham) {
+           foreach($listAnhSanPham as $key=>$anhSP){
+            deleteFile($anhSP['link_hinh_anh']);
+            $this->modelSanPham->destroyAnhSanPham($anhSP['id']);
+           }
+           
         }
 
         header("location:" . BASE_URL_ADMIN . '?act=danh-sach-san-pham');
