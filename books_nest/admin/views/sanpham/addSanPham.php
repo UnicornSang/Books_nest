@@ -49,7 +49,7 @@
                     <?php } ?>
                   </div>
                   <div class="form-group">
-                    <label >Gía sản phẩm</label>
+                    <label >Giá sản phẩm</label>
                     <input type="text" class="form-control" name="gia_san_pham"  placeholder="giá sản phẩm">
                     <?php if (isset($_SESSION['error']['gia_san_pham'])) {  ?>
              
@@ -75,6 +75,16 @@
              
 
                     <p class="text-danger"><?=$_SESSION['error']['hinh_anh'] ?></p>
+
+                    <?php } ?>
+                  </div>
+                   <div class="form-group">
+                    <label >Allbum ảnh</label>
+                    <input type="file" class="form-control" name="img_array[]"  placeholder="allbum anh" multiple>
+                    <?php if (isset($_SESSION['error']['file_array'])) {  ?>
+             
+
+                    <p class="text-danger"><?=$_SESSION['error']['file_array'] ?></p>
 
                     <?php } ?>
                   </div>
@@ -104,7 +114,7 @@
                     <?php if (isset($_SESSION['error']['ngay_nhap'])) {  ?>
              
 
-                    <p class="text-danger"><?=$_SESSION['error']['ten_san_pham'] ?></p>
+                    <p class="text-danger"><?=$_SESSION['error']['ngay_nhap'] ?></p>
 
                     <?php } ?>
                   </div>

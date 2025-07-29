@@ -53,6 +53,7 @@ match ($act) {
     'form-sua-san-pham' => (new AdminSanPhamController())->formEditSanPham(),
     'sua-san-pham' => (new AdminSanPhamController())->postEditSanPham(),
     'xoa-san-pham' => (new AdminSanPhamController())->deleteSanPham(),
+    'allbum-anh-san-pham' => (new AdminSanPhamController())->postEditAnhSanPham(),
 
     //router quản lý tài khoản
         //quản trị
