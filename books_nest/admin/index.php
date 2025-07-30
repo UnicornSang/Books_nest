@@ -12,6 +12,7 @@ require_once './controllers/AdminSanPhamController.php';
 require_once './controllers/AdminDonHangController.php';
 require_once './controllers/AdminBaoCaoThongKeController.php';
 require_once './controllers/AdminTaiKhoanController.php';
+require_once './controllers/AdminBinhLuanController.php';
 
 // Require toàn bộ file Models
 
@@ -19,6 +20,7 @@ require_once './models/AdminDanhMuc.php';
 require_once './models/AdminSanPham.php';
 require_once './models/AdminDonHang.php';
 require_once './models/AdminTaiKhoan.php';
+require_once './models/AdminBinhLuan.php';
 // Route
 $act = $_GET['act'] ?? '/';
 

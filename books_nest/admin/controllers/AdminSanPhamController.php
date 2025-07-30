@@ -4,10 +4,12 @@ class AdminSanPhamController
 {
     public $modelSanPham;
     public $modelDanhMuc;
+    public $modelBinhLuan;
     public function __construct()
     {
         $this->modelSanPham = new AdminSanPham();
         $this->modelDanhMuc = new AdminDanhMuc();
+        $this->modelBinhLuan = new AdminBinhLuan();
     }
 
     public function dannhSachSanPham()
@@ -259,7 +261,10 @@ class AdminSanPhamController
             $id = $_GET['id_san_pham'];
             $sanPhamMoldel = new AdminSanPham();
             $sanPham = $sanPhamMoldel->getDetaiSanPham($id);
-            require_once './views/sanpham/chitetsanpham.php';
+            $listAnhSanPham = $sanPhamMoldel->getListAnhSanPham($id);
+            $listBinhLuanSanPham = $this->modelBinhLuan->getBinhLuanByIdSanPham($id);
+            // var_dump($listAnhSanPham);die;
+            require_once './views/sanpham/detailsanpham.php';
         }
     }
 
